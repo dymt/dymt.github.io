@@ -2,24 +2,9 @@
 <html lang="zh">
 
 <head>
-	<script src="Bmob-2.4.0.min.js"></script>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <script>Bmob.initialize("c9030a2692be64b0", "521979");
-  Bmob.debug(true);
-  function register(){
-	  let params = {
-	      username: document.getElementById("username").value,
-	      password: document.getElementById("pwd").value
-	  }
-	  Bmob.User.register(params).then(res => {
-	    location.href="login.html";
-	  }).catch(err => {
-	  alert(err.error);
-	  });
-  }
-  </script>
-  <title>先注册账号哦！</title>
+  <title>登录一下叭！</title>
   <style>
     body {
       background: url('https://cdn.pixabay.com/photo/2018/08/14/13/23/ocean-3605547_1280.jpg') no-repeat;
@@ -88,16 +73,14 @@
 
 <body>
   <div id="login_box">
-    <h2>注册</h2>
+    <h2>LOGIN</h2>
     <div id="input_box">
-      <input type="text" placeholder="请输入用户名" id="username">
+      <input type="text" placeholder="请输入用户名">
     </div>
     <div class="input_box">
-      <input type="password" placeholder="请输入密码" id="pwd">
+      <input type="password" placeholder="请输入密码">
     </div>
-    <button onclick="register()">注 册</button>
-	<button onclick="window.location.href='login.html'">已有账号密码，点这里</p>
-	<br>
+    <button>登 录</button><br>
   </div>
 </body>
 </html>
