@@ -2,8 +2,20 @@
 <html lang="zh">
 
 <head>
+	<script src="Bmob-2.4.0.min.js"></script>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script>
+  Bmob.initialize("c9030a2692be64b0", "521979");
+  Bmob.debug(true);
+  function login(){
+	   Bmob.User.login(document.getElementById('username'),document.getElementById('pwd')).then(res => {
+	     location.href="PAGE.html"
+	   }).catch(err => {
+	    console.log(err)
+	  });
+  }
+	</script>
   <title>登录一下叭！</title>
   <style>
     body {
@@ -73,14 +85,14 @@
 
 <body>
   <div id="login_box">
-    <h2>LOGIN</h2>
+    <h2>登录</h2>
     <div id="input_box">
-      <input type="text" placeholder="请输入用户名">
+      <input type="text" placeholder="请输入用户名" id="username">
     </div>
     <div class="input_box">
-      <input type="password" placeholder="请输入密码">
+      <input type="password" placeholder="请输入密码" id="pwd">
     </div>
-    <button>登 录</button><br>
+    <button onclick="login()">登 录</button><br>
   </div>
 </body>
 </html>
