@@ -9,10 +9,10 @@
   Bmob.initialize("c9030a2692be64b0", "521979");
   Bmob.debug(true);
   function login(){
-	   Bmob.User.login(document.getElementById('username'),document.getElementById('pwd')).then(res => {
+	   Bmob.User.login(document.getElementById('username').value,document.getElementById('pwd').value).then(res => {
 	     location.href="PAGE.html"
 	   }).catch(err => {
-	    console.log(err)
+	    alert(err.error)
 	  });
   }
 	</script>
